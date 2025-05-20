@@ -3,7 +3,7 @@ const tasks = document.querySelector('#tasks')
 
 input.addEventListener('keydown', e => {
   if(e.key === 'Enter' && input.value !== '') {
-    tasks.innerHTML += `<label class="task"> <input type="checkbox"> ${input.value} </label>`
+    tasks.innerHTML += `<label class="task"> <input type="checkbox"> <span class="inputValue">${input.value}</span> </label>`
     input.value = ''
   } 
 })
