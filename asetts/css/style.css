@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: #7D98A1;
+  background: linear-gradient(to right, #7D98A1, #4f79a8);
 }
 
 #container {
@@ -25,13 +25,34 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 30px;
+}
+
+.top-list h1 {
+  color: #052F5F;
 }
 
 .top-list input {
   border-radius: 5px;
   border: none;
   outline: none;
-  padding: 6px 25px;
+  padding: 10px 30px;
   font-size: 14px;
 }
 
+.bottom-list {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  background-color: #4eaff5;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #429fe0;
+}
