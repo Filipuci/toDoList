@@ -56,3 +56,13 @@ body {
 .button:hover {
   background-color: #429fe0;
 }
+
+#tasks {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.completed-task {
+  text-decoration: line-through;
+}
