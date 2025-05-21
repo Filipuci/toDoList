@@ -4,7 +4,6 @@
 * {
   margin: 0;
   padding: 0;
-  text-decoration: none;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
@@ -24,7 +23,7 @@ body {
 
 #main-box {
   margin-top: 50px;
-  width: 20%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
