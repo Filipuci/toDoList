@@ -27,3 +27,21 @@ document.querySelector('#completed-btn').addEventListener('click', () => {
     }
   })
 })
+
+document.querySelector('#pending-btn').addEventListener('click', () => {
+  const task = document.querySelectorAll('.task')
+  Array.from(task).forEach(tarefa => {
+    if (tarefa.classList.contains('completed-task')) {
+      tarefa.style.display = 'none'
+    } else {
+      tarefa.style.display = 'flex'
+    }
+  })
+})
+
+document.querySelector('#allTasks-btn').addEventListener('click', () => {
+  const task = document.querySelectorAll('.task')
+  Array.from(task).forEach(tarefa => {
+    tarefa.style.display = 'flex'
+  })
+})
