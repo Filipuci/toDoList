@@ -18,7 +18,12 @@ tasks.addEventListener('click', e => {
 })
 
 document.querySelector('#completed-btn').addEventListener('click', () => {
-  let completedTasks = 
-  tasks.innerHTML = ''
-  console.log(tasks)
+  const task = document.querySelectorAll('.task')
+  Array.from(task).forEach(tarefa => {
+    if (tarefa.classList.contains('completed-task')) {
+      tarefa.style.display = 'flex'
+    } else {
+      tarefa.style.display = 'none'
+    }
+  })
 })
