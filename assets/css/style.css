@@ -14,6 +14,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  list-style: none;
 }
 
 body {
@@ -89,10 +90,22 @@ body {
 }
 
 .inputValue {
-  margin-left: 5px;
+  margin-left: 10px;
   font-size: 16px;
 }
 
-.completed-task {
+.delete-btn {
+  margin-left: 15px;
+  cursor: pointer;
+  color: #222222;
+  transition: all ease-in 0.3s;
+}
+
+.delete-btn:hover {
+  color: #e63946;
+  transform: scale(1.2);
+}
+
+.completed-task label {
   text-decoration: line-through;
 }
