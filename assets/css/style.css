@@ -33,6 +33,10 @@ body {
   width: 100%;
 }
 
+#container h1 {
+  color: var(--light-color);
+}
+
 #container h1 span {
   color: var(--text-span-color);
 }
