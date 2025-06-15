@@ -6,6 +6,12 @@ let countTasks = 0
 input.addEventListener('keydown', e => {
   if (e.key === 'Enter' && input.value.trim() !== '') {
 
+    const isDuplicate = Array.from(document.querySelectorAll('.inputValue')).some(label => 
+      label.textContent.toLowerCase().trim() === input.value.toLowerCase().trim()
+    )
+    
+    if (isDuplicate) return
+
     const li = document.createElement('li')
     li.dataset.status = 'pending'
 
@@ -35,7 +41,6 @@ input.addEventListener('keydown', e => {
 // Risca a tarefa concluída
 tasks.addEventListener('click', e => {
   if (e.target.tagName === 'INPUT' && e.target.type === 'checkbox') {
-    console.log('cliquei no input')
     const task = e.target.closest('[data-status]')
     task.classList.toggle('completed-task')
 

@@ -41,6 +41,10 @@ body {
 #main-box {
   margin-top: 50px;
   width: 30%;
+  background-color: #4f79a8;
+  box-shadow: 5px 5px 10px var(--box-shadow-color);
+  padding: 20px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,7 +74,7 @@ body {
 }
 
 .button {
-  background-color: var(--primary-color);
+  background-color: #fff;
   border-radius: 5px;
   padding: 8px;
   cursor: pointer;
@@ -79,7 +83,9 @@ body {
 }
 
 .button:hover {
-  background-color: var(--hover-color);
+  background-color: #2f62a1;
+  color: #fff;
+  transform: scale(1.1);
 }
 
 #tasks {
@@ -89,20 +95,31 @@ body {
   flex-direction: column;
 }
 
+#tasks li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
 .inputValue {
   margin-left: 10px;
   font-size: 16px;
+  color:var(--h1-color)
 }
 
 .delete-btn {
   margin-left: 15px;
   cursor: pointer;
-  color: #222222;
-  transition: all ease-in 0.3s;
+  color: #e63946;
+  transition: 0.3s;
 }
 
-.delete-btn:hover {
-  color: #e63946;
+.delete-btn i {
+  transition: 0.2s;
+}
+
+.delete-btn:hover i {
+  
   transform: scale(1.2);
 }
 
