@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-  --primary-color: #4eaff5;
-  --hover-color: #429fe0;
+  --hover-color: #2f62a1;
   --bg-gradient: linear-gradient(to top, #7d82a1, #4f79a8);
-  --h1-color: #fff;
+  --light-color: #fff;
   --text-span-color: #0e91ee;
   --box-shadow-color: #4d4d4d;
+  --container-tasks-color: #4f79a8;
+  --bg-task-color: #6084ac;
+  --edit-btn-color: #313131;
+  --delete-btn-color: #e63946;
 }
 
 * {
@@ -30,10 +33,6 @@ body {
   width: 100%;
 }
 
-#container h1 {
-  color: var(--h1-color);
-}
-
 #container h1 span {
   color: var(--text-span-color);
 }
@@ -41,7 +40,7 @@ body {
 #main-box {
   margin-top: 50px;
   width: 30%;
-  background-color: #4f79a8;
+  background-color: var(--container-tasks-color);
   box-shadow: 5px 5px 10px var(--box-shadow-color);
   padding: 20px;
   border-radius: 8px;
@@ -74,7 +73,8 @@ body {
 }
 
 .button {
-  background-color: #fff;
+  min-width: 25%;
+  background-color: var(--light-color);
   border-radius: 5px;
   padding: 8px;
   cursor: pointer;
@@ -83,8 +83,8 @@ body {
 }
 
 .button:hover {
-  background-color: #2f62a1;
-  color: #fff;
+  background-color: var(--hover-color);
+  color: var(--light-color);
   transform: scale(1.1);
 }
 
@@ -99,28 +99,50 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  background-color: var(--bg-task-color);
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .inputValue {
-  margin-left: 10px;
+  margin-left: 20px;
   font-size: 16px;
-  color:var(--h1-color)
+  color: var(--h1-color)
+}
+
+.task-btn-box {
+  display: flex;
 }
 
 .delete-btn {
   margin-left: 15px;
   cursor: pointer;
-  color: #e63946;
-  transition: 0.3s;
+  color: var(--delete-btn-color);
 }
 
-.delete-btn i {
+.delete-btn i,
+.edit-btn i {
   transition: 0.2s;
 }
 
-.delete-btn:hover i {
-  
+.delete-btn:hover i,
+.edit-btn:hover i {
   transform: scale(1.2);
+}
+
+.edit-btn {
+  color: var(--edit-btn-color);
+  cursor: pointer;
+}
+
+.inputEdit {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--light-color);
+  color: var(--light-color);
+  text-align: center;
+  font-size: 16px;
 }
 
 .completed-task label {

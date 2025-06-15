@@ -6,10 +6,10 @@ let countTasks = 0
 input.addEventListener('keydown', e => {
   if (e.key === 'Enter' && input.value.trim() !== '') {
 
-    const isDuplicate = Array.from(document.querySelectorAll('.inputValue')).some(label => 
+    const isDuplicate = Array.from(document.querySelectorAll('.inputValue')).some(label =>
       label.textContent.toLowerCase().trim() === input.value.toLowerCase().trim()
     )
-    
+
     if (isDuplicate) return
 
     const li = document.createElement('li')
@@ -24,13 +24,22 @@ input.addEventListener('keydown', e => {
     checkbox.type = 'checkbox'
     checkbox.setAttribute('id', `task-${countTasks}`)
 
-    const deleteTask = document.createElement('span') 
+    const taskButtonBox = document.createElement('div')
+    taskButtonBox.classList.add('task-btn-box')
+
+    const editTask = document.createElement('span')
+    editTask.classList.add('edit-btn')
+    editTask.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>'
+
+    const deleteTask = document.createElement('span')
     deleteTask.classList.add('delete-btn')
     deleteTask.innerHTML = '<i class="fa-solid fa-trash"></i>'
 
     li.appendChild(checkbox)
     li.appendChild(label)
-    li.appendChild(deleteTask)
+    li.appendChild(taskButtonBox)
+    taskButtonBox.appendChild(editTask)
+    taskButtonBox.appendChild(deleteTask)
     tasks.appendChild(li)
 
     countTasks++
@@ -46,13 +55,54 @@ tasks.addEventListener('click', e => {
 
     task.dataset.status = task.classList.contains('completed-task') ? 'completed' : 'pending'
   }
-})
 
-// Deleta a tarefa
-tasks.addEventListener('click', e => {
+  // Deleta a tarefa
   if (e.target.closest('.delete-btn')) {
     e.target.closest('[data-status]').remove()
-  }})
+  }
+
+  // Edita a tarefa
+  if (e.target.closest('.edit-btn')) {
+    const li = e.target.closest('li')
+    const label = li.querySelector('.inputValue')
+
+    if (li.classList.contains('completed-task')) return
+
+    const inputEdit = document.createElement('input')
+    inputEdit.type = 'text'
+    inputEdit.value = label.textContent
+    inputEdit.classList.add('inputEdit')
+
+    label.replaceWith(inputEdit)
+    inputEdit.focus()
+
+    inputEdit.addEventListener('keydown', e => {
+      if(e.key === 'Enter') {
+        saveEdit(inputEdit, li)
+      }
+    })
+
+    inputEdit.addEventListener('blur', () => {
+      saveEdit(inputEdit, li)
+    })
+
+    let isSaving = false
+
+    function saveEdit(inputEdit, li) {
+      if (isSaving) return
+      isSaving = true
+
+      const newLabel = document.createElement('label')
+      newLabel.classList.add('inputValue')
+      newLabel.setAttribute('for', li.querySelector('input[type="checkbox"]').id)
+      newLabel.textContent = inputEdit.value.trim() || 'undefined'
+      
+      inputEdit.replaceWith(newLabel)
+
+      isSaving = false
+    }
+  }
+})
 
 function getAllTasks() {
   return Array.from(document.querySelectorAll('[data-status]'))
