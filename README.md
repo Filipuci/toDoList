@@ -74,11 +74,29 @@ MyTasks foi criado para resolver um problema real: a necessidade de gerenciar mi
 git clone https://github.com/seu-usuario/seu-repositorio.git
 Acesse a pasta do projeto:
 
-bash
-Copiar
-Editar
 cd seu-repositorio
 Abra o arquivo index.html no navegador.
 
 Adicione, edite, marque e filtre suas tarefas diárias.
 
+```
+
+## 🧩 O que Aprendi
+
+- Validação eficiente de inputs usando `.trim()` para evitar espaços vazios  
+- Manipulação dinâmica do DOM para criação, edição e remoção de elementos  
+- Controle avançado de eventos, incluindo o uso do evento `blur` para detectar saída do campo de edição  
+- Uso dos métodos `replaceWith` para substituir elementos do DOM de forma eficiente  
+- Utilização do método `closest` para navegar na árvore DOM e facilitar a manipulação de elementos relacionados  
+- Implementação de filtros para gerenciar a visualização das tarefas (todas, pendentes, completas)  
+
+---
+
+## 📌 Roteiro do Projeto
+
+- [X] Criar funcionalidades básicas de adicionar, editar, deletar e marcar tarefas  
+- [X] Implementar filtros de visualização (todas, pendentes, completas)  
+- [ ] Estilizar checkbox customizado  
+- [ ] Implementar modo dark para a aplicação  
+- [ ] Tornar o layout totalmente responsivo  
+- [ ] Salvar tarefas usando localStorage para persistência  
