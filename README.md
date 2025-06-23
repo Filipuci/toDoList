@@ -2,7 +2,7 @@
     <h1 align="center"><code>MyTasks</code></h1>
 </p>
 <p align="center">
-    <em>Uma aplicação simples e funcional de lista de tarefas (to-do list), com interface limpa e intuitiva, desenvolvida para ajudar no controle das atividades diárias.</em>
+    <em>Uma aplicação prática e funcional de lista de tarefas, criada para organizar checklists diárias e reforçar conhecimentos em DOM e eventos JavaScript.</em>
 </p>
 <p align="center">
     <em>Construído com as seguintes ferramentas e tecnologias:</em>
@@ -19,6 +19,7 @@
 
 - [📍 Visão Geral](#-visão-geral)
 - [🎯 Funcionalidades](#-funcionalidades)
+- [📂 Estrutura do Repositório](#-estrutura-do-repositório)
 - [⚙️ Tecnologias Utilizadas](#-tecnologias-utilizadas)
 - [🚀 Como Usar](#-como-usar)
 - [🧩 O que Aprendi](#-o-que-aprendi)
@@ -29,13 +30,53 @@
 
 ## 📍 Visão Geral
 
-MyTasks é uma aplicação web simples para gerenciamento de tarefas diárias, desenvolvida para oferecer uma interface clara e funcional que facilita o acompanhamento das atividades e organização pessoal.
+MyTasks foi criado para resolver um problema real: a necessidade de gerenciar minhas checklists diárias de tarefas de forma simples e eficiente. Além de organizar meu dia, o projeto serviu para reforçar meus conhecimentos em manipulação do DOM e eventos em JavaScript.
 
 ---
 
 ## 🎯 Funcionalidades
 
-- Adicionar novas tarefas com descrição  
-- Marcar tarefas como concluídas  
-- Remover tarefas da lista  
-- Interface responsiva e amigável  
+- Adicionar tarefas com validação (evita espaços em branco ou campos vazios)  
+- Editar tarefas existentes  
+- Deletar tarefas  
+- Marcar tarefas como concluídas clicando no texto (riscando o item)  
+- Filtrar tarefas: todas, pendentes e concluídas  
+- Interface simples e funcional, com foco em usabilidade
+
+---
+
+## 📂 Estrutura do Repositório
+
+```sh
+└── /
+    ├── css
+    │   └── style.css
+    ├── js
+    │   └── script.js
+    ├── index.html
+    └── README.md
+
+## ⚙️ Tecnologias Utilizadas
+
+- **HTML5** – Estrutura da aplicação  
+- **CSS3** – Estilo e layout  
+- **JavaScript** – Manipulação do DOM e lógica das tarefas  
+
+---
+
+## 🚀 Como Usar
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+Acesse a pasta do projeto:
+
+bash
+Copiar
+Editar
+cd seu-repositorio
+Abra o arquivo index.html no navegador.
+
+Adicione, edite, marque e filtre suas tarefas diárias.
+
