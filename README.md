@@ -56,6 +56,8 @@ MyTasks foi criado para resolver um problema real: a necessidade de gerenciar mi
     ├── index.html
     └── README.md
 
+```
+
 ## ⚙️ Tecnologias Utilizadas
 
 - **HTML5** – Estrutura da aplicação  
